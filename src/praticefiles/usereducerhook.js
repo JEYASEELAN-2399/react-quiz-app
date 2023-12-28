@@ -19,8 +19,6 @@ const Quiz = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const testClick = () => {
-    console.log(state)
-    
     dispatch({
       type: "NEXT QUESTION",
     });
@@ -29,7 +27,7 @@ const Quiz = () => {
   return (
     <div className="quiz">
       <div className="score">Question 1/8</div>
-      <Question Questions={state.questions}/>
+      <Question />
       <div className="next-button" onClick={testClick}>
         NEXT QUESTION {state.currentquestionindex}
       </div>
